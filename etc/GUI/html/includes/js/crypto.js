@@ -16,8 +16,6 @@ String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
 };
 
-var frequencies = {};
-
 function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
 	var len = files.length;
@@ -35,6 +33,8 @@ function handleFileSelect(evt) {
 			
 				var text = reader.result;
 				var arrays = $.csv.toArrays(text);
+				
+				var frequencies = getFrequencies();
 				frequencies[filename] = arrays;
 			}
 			
@@ -56,6 +56,7 @@ function generateMenuFromData() {
 	var prop = []; 
 	
 	// get all the filenames
+	var frequencies = getFrequencies();
 	for (var property in frequencies) {
 		if (frequencies.hasOwnProperty(property)) {
 			prop.push(property);
@@ -83,7 +84,14 @@ function generateMenuFromData() {
 	// define their click events
 	$(".language").click(function() {
 	var key = $(this).attr("key");
+	
+		// get the language
 		var lang = frequencies[key];
 		
+		// create a ceasar object with rotation 3 and that language
+		var c = createCaesar(lang, 3);
+		
+		// alert the encryption for 'hello'
+		alert((c["convert"])("hello"));
 	});
 }
