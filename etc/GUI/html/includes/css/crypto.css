@@ -1,0 +1,34 @@
+html {
+	background-color:black;
+}
+
+#selectFiles {
+	background-color:#00d60f;
+	padding:10px;
+	font-size:35px;
+	cursor: pointer; 
+	cursor: hand;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.language {  
+	color:white;
+	font-size:35px;
+	padding:10px;
+	-webkit-transition: background 0.5s linear;
+	-moz-transition: background 0.5s linear;
+	-ms-transition: background 0.5s linear;
+	-o-transition: background 0.5s linear;
+	transition: background 0.5s linear;
+	cursor: pointer; 
+	cursor: hand;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.language:hover { 
+	background-color: #6fc2e7; color:#393939;  
+}
+
+.gone {
+	display:none;
+}
