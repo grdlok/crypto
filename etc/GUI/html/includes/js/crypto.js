@@ -92,6 +92,6 @@ function generateMenuFromData() {
 		var c = createCaesar(lang, 3);
 		
 		// alert the encryption for 'hello'
-		alert((c["convert"])("hello"));
+		alert("hello -> " + (c["convert"])("hello"));
 	});
 }
