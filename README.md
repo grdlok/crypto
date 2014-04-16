@@ -15,4 +15,10 @@ Caesar
 - JavaScript.
 - PHP.
 - Python.
+- Ruby.
+
+Affine
+------
+
+- Python. 
 - Ruby. 
