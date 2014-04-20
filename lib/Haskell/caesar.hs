@@ -25,7 +25,7 @@ letters e = array (0, len) lst
       symbols = map head e
       (_, lst) = foldr (\next (c,lst) -> (c-1,(c,next):lst)) (len,[]) symbols
 
-letters2 = concat . (map head)
+letters2 = concatMap head
 
 main = do
   [lang, disp] <- getArgs
