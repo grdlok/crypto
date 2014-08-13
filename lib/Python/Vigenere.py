@@ -13,7 +13,7 @@ class Vigenere:
         
 
         if p_length > k_length:
-            repetition = (p_length % k_length) + 1
+            repetition = (p_length // k_length) + 1
             encrypt_key = self.key * repetition
             encrypt_key = encrypt_key[:p_length]
         else:
@@ -37,7 +37,7 @@ class Vigenere:
         plaintext = ""
 
         if c_length > k_length:
-            repetition = (c_length % k_length) + 1
+            repetition = (c_length // k_length) + 1
             decrypt_key = self.key * repetition
             decrypt_key = decrypt_key[:c_length]
         else:   
